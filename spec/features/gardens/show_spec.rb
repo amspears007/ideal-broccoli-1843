@@ -6,7 +6,7 @@ RSpec.describe 'Garden Show Page', type: :feature do
   let!(:plot2) {garden.plots.create!(number: 20, size: "Medium", direction: "East")}
   let!(:plot3) {garden.plots.create!(number: 15, size: "small", direction: "North")}
 
-  let!(:tulip) {Plant.create(name: "Tulip", description: "Prefers rich, well draining soil.", days_to_harvest: 105)}
+  let!(:tulip) {Plant.create(name: "Tulip", description: "Prefers rich, well draining soil.", days_to_harvest: 90)}
   let!(:rose) {Plant.create(name: "Rosebush", description: "Prefers dry soil.", days_to_harvest: 60)}
   let!(:bulb) {Plant.create(name: "Bulbs", description: "Prefers rich, wet soil.", days_to_harvest: 50)}
   let!(:tomato) {Plant.create(name: "Heirloom", description: "Prefers soil.", days_to_harvest: 120)}

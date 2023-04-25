@@ -1,7 +1,7 @@
 <h1> Garden Show Page</h1>
 
+<h3> Plots </h3>
 <% @garden.plots.each do |plot| %>
-<ol> Plot#<%= plot.number %></ol>
   <% plot.plants.each do |plant| %>
     <li><%= plant.name %></li>
   <% end %>
