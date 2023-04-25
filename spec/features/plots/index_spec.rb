@@ -23,13 +23,13 @@ RSpec.describe 'plot index', type: :feature do
       visit '/plots'
       save_and_open_page
 
-      within("#plots-#{plot1.id}") do
       expect(page).to have_content("Plot#25")
       expect(page).to have_content("Tulip")
       expect(page).to have_content("Rosebush")
-      end
-
       expect(page).to have_content("Plot#20")
+      expect(page).to have_content("Bulbs")
+      expect(page).to have_content("Plot#15")
+
 
 
     end
