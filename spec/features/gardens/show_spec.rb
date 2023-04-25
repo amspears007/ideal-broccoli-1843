@@ -30,6 +30,8 @@ RSpec.describe 'Garden Show Page', type: :feature do
 
       expect(page).to have_content("Rosebush")
       expect(page).to have_content("Bulb")
+      expect(page).to have_content("Tulip")
+      expect(page).to_not have_content("Heirloom")
       end
     end
   end

@@ -1,8 +1,8 @@
 <h1> Garden Show Page</h1>
 
-<h3> Plots </h3>
-<% @garden.plots.each do |plot| %>
-  <% plot.plants.each do |plant| %>
-    <li><%= plant.name %></li>
-  <% end %>
+<h3> Plants with less than 100 day Harvest </h3>
+<% @garden.less_than_100_harvest.each do |plant| %>
+ 
+    <li><%= plant.name %></li> 
+  <%# end %> 
 <% end %>
