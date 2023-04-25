@@ -31,4 +31,17 @@ RSpec.describe 'plot index', type: :feature do
       expect(page).to have_content("Plot#15")
     end
   end
+
+  describe "US2 Remove a Plant from a Plot" do
+    it "Next to each plant's name I see a link to remove that plant from that plot When I click on that link" do
+      visit '/plots'
+
+      expect(page).to have_link("Remove #{bulb.name}")
+      click_link "Remove #{bulb.name}"
+
+      expect(current_path).to eq(plots_path(plot3))
+      expect(page).to have_content(rose.name)
+      expect(page).to_not have_content(bulb.name)
+    end
+  end
 end
