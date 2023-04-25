@@ -25,7 +25,7 @@ RSpec.describe Plant do
 
   describe 'list only includes plants that take less than 100 days to harvest and is unique' do
     it '.less_than_100_harvest' do
-      expect(Plant.less_than_100_harvest).to eq([rose, bulb, tulip])
+      expect(Plant.less_than_100_harvest).to match_array([rose, bulb, tulip])
     end
   end
 end
